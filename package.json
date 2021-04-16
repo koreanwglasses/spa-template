@@ -2,12 +2,12 @@
   "main": "src/index.tsx",
   "scripts": {
     "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\"",
-    "prebuild": "tcm src",
+    "prebuild": "tsm src",
     "build:dev": "yarn prebuild && cross-env NODE_ENV=development webpack --config webpack.dev.js",
     "build:prod": "yarn prebuild && cross-env NODE_ENV=production webpack --config webpack.prod.js",
-    "live:precompile": "tcm src -w",
+    "live:prebuild": "tsm src -w",
     "live:serve": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js",
-    "live": "npm-run-all --parallel live:precompile live:serve"
+    "live": "npm-run-all --parallel live:prebuild live:serve"
   },
   "dependencies": {
     "@types/mini-css-extract-plugin": "^1.2.2",
@@ -30,10 +30,13 @@
     "prettier": "2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
     "source-map-loader": "^2.0.1",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.17",
     "typed-css-modules": "^0.6.7",
+    "typed-scss-modules": "^4.1.1",
     "typescript": "^4.2.2",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0",
