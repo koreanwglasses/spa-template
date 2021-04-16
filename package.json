@@ -1,7 +1,7 @@
 {
   "main": "src/index.tsx",
   "scripts": {
-    "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\"",
+    "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,json,scss}\"",
     "prebuild": "tsm src",
     "build:dev": "yarn prebuild && cross-env NODE_ENV=development webpack --config webpack.dev.js",
     "build:prod": "yarn prebuild && cross-env NODE_ENV=production webpack --config webpack.prod.js",
